@@ -13,8 +13,6 @@ ext = []
 for td in soup.find_all('td'):
     if "@desales.edu" in td.text:
         emails.append(td.text)
-    if len(td.text) == 4 and td.text[0].isdigit() and td.text[1].isdigit():
-        ext.append(td.text)
     
 print(emails)
 print(ext)
