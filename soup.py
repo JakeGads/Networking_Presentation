@@ -14,4 +14,3 @@ for td in soup.find_all('td'):
         emails.append(td.text)
     
 print(emails)
-print(ext)
