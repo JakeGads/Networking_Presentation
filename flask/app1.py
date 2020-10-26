@@ -40,7 +40,6 @@ app.route("doggos")
 def dogs(num=0):
     if num == 0:
         request.args.get('num', 1)
-
     return render_template("template3", title="Dogs", num=num)
 
 
