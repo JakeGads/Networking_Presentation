@@ -32,3 +32,9 @@ open("https://jake.dev/a.csv") do |file|
   # whatever you want to do
 end
 ```
+
+```R
+library (RCurl)
+data <- read.csv(getURL("https://jake.dev/a.csv")) 
+# naturally can load http files without RCurl
+```
