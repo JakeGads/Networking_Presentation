@@ -8,7 +8,6 @@ resp.html.render() # forces js to run
 soup = BeautifulSoup(resp.html.html, "lxml")
 
 emails = []
-ext = []
 
 for td in soup.find_all('td'):
     if "@desales.edu" in td.text:
