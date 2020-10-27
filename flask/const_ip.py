@@ -1,6 +1,6 @@
 import requests
 import socket
-alt = "https://raw.githubusercontent.com/gadzygadz/Networking_Presentation/main/Data/bluemoon.ip"
+alt = requests.get("https://raw.githubusercontent.com/gadzygadz/Networking_Presentation/main/Data/bluemoon.ip")
 ip = requests.get('https://api.ipify.org').text
 hostname = socket.gethostname()
 
