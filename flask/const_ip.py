@@ -1,5 +1,5 @@
+import requests
 import socket
-
-alt = "404 Connection not found"
-hostname = socket.gethostname()    
-ip = socket.gethostbyname(hostname)
+alt = "Jake you absolute buffoon you forgot to check the Laptop IP address"
+ip = requests.get('https://api.ipify.org').text
+hostname = socket.gethostname()

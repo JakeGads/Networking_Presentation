@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>{{ title }} - Flask Demo</title>
+    </head>
+    <a href="{{url_for('eagle', num = num + 1)}}">Next</a>
+    <a href="{{url_for('eagle', num = num - 1)}}">Last</a>
+    <a href="{{url_for('hello')}}">Home</a>
+    <body>
+        <h1>Hello, User #{{ num }}!</h1>
+        <h2># {{ index }} greatest Eagles Player (according to a reddit poll)</h2>
+        <br><br><br>
+        <h2>{{eagle["name"]}}</h2>
+        <h3>Who wore/wears the # {{ eagle["number"] }}</h3>
+        <img src="{{eagle['image']}}">
+    </body>
+</html>

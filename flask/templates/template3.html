@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>{{ title }} - Flask Demo</title>
+    </head>
+    <body>
+        {% if num > 0 %}
+            <h1>Hello, User #{{ num }}!</h1>
+        {% else %}
+            <h1>Hello, User #{{ num * -1 }}!</h1>
+        {% endif %}
+        <h2># {{ index }} Most popular dog in Philly</h2>
+        <a href="{{url_for('dogs', num = num + 1)}}">Next</a>
+        <a href="{{url_for('dogs', num = num - 1)}}">Last</a>
+        <a href="{{url_for('hello')}}">Home</a>
+        <br><br><br>
+        <h2>Breed: {{dog['breed']}}</h2>
+        <h3>{{dog['info']}}</h3>
+        <h4>National Rank: {{dog['national_rank']}}</h4>
+        <h4>Local Rank: {{dog['philly_rank']}}</h4>
+        <img src="{{dog['pic']}}">
+    </body>
+</html>

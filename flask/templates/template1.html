@@ -5,6 +5,9 @@
     <body>
         <h1>Hello, User #{{ num }}!</h1>
         <h2># {{ index }} greatest Philly Player (according to our google overloads)</h2>
+        <a href="{{url_for('phillies', num = num + 1)}}">Next</a>
+        <a href="{{url_for('phillies', num = num - 1)}}">Last</a>
+        <a href="{{url_for('hello')}}">Home</a>
         <br><br><br>
         <h2>{{phil["name"]}}</h2>
         <h3>Who played {{ phil["position"] }}</h3>
