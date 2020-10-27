@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>{{ title }} - Flask Demo</title>
+    </head>
+    <body>
+        <h1>Hello, User #{{ num }}!</h1>
+        <h2># {{ index }} greatest Philly Player (according to our google overloads)</h2>
+        <br><br><br>
+        <h2>{{phil["name"]}}</h2>
+        <h3>Who played {{ phil["position"] }}</h3>
+        <img src="{{phil['image']}}">
+    </body>
+</html>

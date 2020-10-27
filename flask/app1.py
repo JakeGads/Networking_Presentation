@@ -16,8 +16,7 @@ def phillies(num=1):
     index = (int(num) % len(object)) + 1
     object = object[str(index)]
 
-    return f"<h1>{index} We in Philly baby</h1>"
-    # return render_template("template1", title="Phillies", num=num, phil=object)
+    return render_template("template1.html", title="Phillies", num=num, index=index, phil=object)
 
 @app.route("/fly/<num>")
 def eagle(num=1):
