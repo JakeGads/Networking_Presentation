@@ -1,0 +1,37 @@
+{
+    "1": {
+        "breed": "Bichon Frise",
+        "info": "This cute, compact pup is perfect for apartment dwellers. Quite the little show-offs, bichons enjoy performing tricks for their pet parents and strangers alike.",
+        "national_rank": "N/A",
+        "philly_rank": 1,
+        "pic": "https://www.rover.com/blog/wp-content/uploads/2019/09/BichonFrise-min-1.jpg"
+    },
+    "2":{
+        "breed": "Jack Russell Terrier",
+        "info": "These clever little dogs often have their own ideas on how things should be done. They’re playful, affectionate, and have an independent streak that can keep owners on their toes.",
+        "national_rank": "N/A",
+        "philly_rank": 2,
+        "pic": "https://www.rover.com/blog/wp-content/uploads/2019/09/JackRussellTerrier-min-1.jpg"
+    },
+    "3":{
+        "breed": "American Pit Bull Terrier",
+        "info": "With naturally gentle, loyal dispositions, pit bull terriers can make great family pets. This breed responds well to training and are popular obedience and agility competitors.",
+        "national_rank": 15,
+        "philly_rank": 3,
+        "pic": "https://www.rover.com/blog/wp-content/uploads/2019/09/AmericanPitBullTerrier-min-1.jpg"
+    },
+    "4":{
+        "breed": "Beagle",
+        "info": "With their pleading expressions and funny personalities, it’s hard to resist a beagle. They make excellent hunting dogs and tend to be very loyal to their people.",
+        "national_rank": 13,
+        "philly_rank": 4,
+        "pic": "https://www.rover.com/blog/wp-content/uploads/2019/09/Beagle-min-1.jpg"
+    },
+    "5":{
+        "breed":"French Bulldog",
+        "info":"Stocky like an English bulldog but not as large, Frenchies are great for homes of all sizes. They don’t need a ton of exercise—nice walks and trips to the dog park work well.",
+        "national_rank":18,
+        "philly_rank": 5,
+        "pic": "https://www.rover.com/blog/wp-content/uploads/2019/09/FrenchBulldog-min-1.jpg"
+    }
+}
