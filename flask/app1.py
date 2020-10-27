@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, url_for
 import requests
 import json
-import ip
+import const_ip as ip
 
 app = Flask(__name__)
 
@@ -20,7 +20,7 @@ def phillies(num=1):
     # return render_template("template1", title="Phillies", num=num, phil=object)
 
 @app.route("/fly/<num>")
-def fly(num=1):
+def eagle(num=1):
     if num == 0:
         num = request.args.get('num', 1)
 
@@ -31,10 +31,9 @@ def fly(num=1):
 
     return render_template("template2", title="Eagles", num=num, eagle=object)
 
-@app.route("/dogs/<num>")
+@app.route("/doggo/<num>")
 def dogs(num=1):
     object = requests.get("https://raw.githubusercontent.com/gadzygadz/Networking_Presentation/main/Data/dogs.json")
-
     object = json.loads(object.text)
     index = (int(num) % len(object)) + 1
     object = object[str(index)]
@@ -54,8 +53,8 @@ def hello():
     <br><br>
     <ul>
         <li><a href="{url_for('phillies', num=count)}">Phillies</a></li>
-        <li><a href="{url_for('fly', num=count)}">Eagles</a></li>
-        <li><a href="{url_for('phillies', num=count)}">Dogs</a></li>
+        <li><a href="{url_for('eagle', num=count)}">Eagles</a></li>
+        <li><a href="{url_for('dogs', num=count)}">Dogs</a></li>
     </ul> 
     """
 
