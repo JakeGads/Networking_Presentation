@@ -1,12 +1,13 @@
 import requests
 import socket
-alt = "Jake you absolute buffoon you forgot to check the Laptop IP address"
+alt = "https://raw.githubusercontent.com/gadzygadz/Networking_Presentation/main/Data/bluemoon.ip"
 ip = requests.get('https://api.ipify.org').text
 hostname = socket.gethostname()
 
 with open(f"../Data/{hostname}.ip", "w+") as f:
     f.write(ip)
 
+# only fires if on laptop
 if hostname == "bluemoon":
     from os import system
     system("git add -A")
