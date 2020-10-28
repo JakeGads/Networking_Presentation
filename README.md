@@ -88,3 +88,49 @@ for index in links:
 ```
 
 using these tools in tandem means that we can consistently search through webpages to generate useful data and load them into python themselves in order to do some operations to them.
+
+### Other Languages
+
+We went fairly in-depth when it comes to python but this is also possible on most modern programming languages as follows is a few example in some popular programing languages.
+
+```JavaScript
+// Node
+require "http"
+let request = http.get("https://jake.dev/a.csv", function(response) {
+  // csv parser
+}
+```
+
+```Java
+// Java
+import java.io.BufferedInput;
+import java.net.URL;
+var csv = new BufferedInput(new URL("https://jake.dev/a.csv"));
+```
+
+```C#
+// C#
+using System.Net;
+var csv = new WebClient("https://jake.dev/a.csv", "my.csv");
+```
+
+```Rust
+// Rust
+let mut csv = request::get("https://jake.dev/a.csv");
+```
+
+```Ruby
+# Ruby
+require "open-uri"
+
+open("https://jake.dev/a.csv") do |file|
+  # whatever you want to do
+end
+```
+
+```R
+# R
+library (RCurl)
+data <- read.csv(getURL("https://jake.dev/a.csv")) 
+# naturally can load http files without RCurl
+```
