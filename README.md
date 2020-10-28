@@ -192,3 +192,36 @@ MVC is a model that is incorporated into many of the larger frameworks that we c
   - Shiny ★
 
 Of corse this list is not exhausted even when it comes down languages that I have highlighted and each framework does have strengths and weaknesses so make sure that you do your research before picking a framework.
+
+### Routing
+
+Now that we know about frameworks and the MVC model I wanted to quickly explain how these come together to generate routes. routes will look something like `https://jakegads.dev/FRC_Quick_Start`, in this example the server name, or what is handled by DNS, is called `jakegads.dev` and the route that it has taken is called `FRC_Quick_Start`
+
+this route can be considered an end point but it is not always the farthest we can go into a route. in this example `FRC_Quick_Start` displays a chapter index for a book but we can also nestle the chapters themselves inside of it making a new url that looks like `.../FRC_Quick_Start/Chapter_1` & `.../FRC_Quick_Start/Chapter_2` and so on and so forth. 
+
+
+In most frameworks routes are defined via the filepath of the views that generate them for instance we would have a folder path that looks something like the following (based on C# .NET)
+
+```bash
+jakegads.dev/
+  model/
+    index.cs # this is for the actual landing page of the site
+    FRC_Quick_Start/
+      index.cs
+      chapter1.cs
+      chapter2.cs
+      ...
+  view/
+    index.cshtml
+    FRC_Quick_Start/
+      index.cshtml
+      chapter1.cshtml
+      chapter2.cshtml
+      ...
+  controller/
+    FRC_Quick_Start/
+      index.cs
+      chapter1.cs
+      chapter2.cs
+      ...
+```
