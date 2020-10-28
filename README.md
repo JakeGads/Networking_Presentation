@@ -159,3 +159,36 @@ Many web frameworks offer templates that allow you to write pseudo-html that inc
 
 The controller is where your logic is. You can do any regular programing things that the specific language has the capabilities of doing. Here you can manipulate your model or set up how data is bundled to be moved into the next view.
 
+### Frameworks
+
+MVC is a model that is incorporated into many of the larger frameworks that we can use to easily setup our server infrastructure. Each framework is language dependent but there are many frameworks for an abundiance of langauges.
+
+- Python
+  - Django ★
+  - Flask ★
+  - Tornado
+  - Pyramid
+- Go○
+  - Gin ★
+  - Beego○
+  - Iris○
+  - Echo
+- Node / Deno (Javascript)
+  - Express.js ★
+  - Meteor.js
+  - Nest.js
+- Java
+  - Spring ★
+  - JSF
+- C#
+  - .NET ★
+  - Mono
+- Rust
+  - Actrix-web (project on hold)
+  - Rocket ★
+- Ruby
+  - Ruby-on-Rails ★
+- R
+  - Shiny ★
+
+Of corse this list is not exhausted even when it comes down languages that I have highlighted and each framework does have strengths and weaknesses so make sure that you do your research before picking a framework.
