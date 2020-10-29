@@ -225,3 +225,14 @@ jakegads.dev/
       chapter2.cs
       ...
 ```
+`FRC_Quick_Start` will now look for an index to read there and create additional routes for 
+
+### Example using flask
+
+`flask` is a package that integrates with python in order to generate server side code and host sites.
+It doesn't follow the true MVC model but we will be structuring our data here so that it looks as similar as possible.
+
+If you attended the in-class presentation this is a slightly more complex model.
+
+
+
