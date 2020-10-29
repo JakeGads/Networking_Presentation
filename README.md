@@ -236,4 +236,23 @@ If you attended the in-class presentation this is a slightly more complex model.
 
 The following code can be found in the [/paper_flask](https://github.com/gadzygadz/Networking_Presentation/tree/main/paper_flask) directory
 
-The first thing that we do is make a `config.py` file, the primary focus of this file is to configure all of the flask information prior to importing and compile things.
+The first thing that we do is make a `config.py` file, the primary focus of this file is to configure all of the flask information prior to importing and compile things. We start simply by just having the flask start itself.
+
+```python
+# config.py
+from flask import Flask
+app = Flask()
+```
+
+Thats really all we need to do in this file for right now, , next we move into our `routes.py` file. In this file we will define the functions that join link our servers route to out function. We will be starting by making a really simple route
+
+```python
+# routes.py
+from config import app
+
+@app.route('/hello') # a decorator
+def hello():
+  return "<h1>Hello World!</h1>"
+```
+
+for those unaware of the power of decorators in python all you need to know for these examples is that it links built in `Flask` dynamically generated function. In practice all you need to know is that the server will now direct generate anyone to that url to the `hello` function 
