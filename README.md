@@ -234,5 +234,6 @@ It doesn't follow the true MVC model but we will be structuring our data here so
 
 If you attended the in-class presentation this is a slightly more complex model.
 
+The following code can be found in the [/paper_flask](https://github.com/gadzygadz/Networking_Presentation/tree/main/paper_flask) directory
 
-
+The first thing that we do is make a `config.py` file, the primary focus of this file is to configure all of the flask information prior to importing and compile things.
