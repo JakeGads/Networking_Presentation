@@ -229,6 +229,8 @@ jakegads.dev/
 
 ### Example using flask
 
+#### Setting up
+
 `flask` is a package that integrates with python in order to generate server side code and host sites.
 It doesn't follow the true MVC model but we will be structuring our data here so that it looks as similar as possible.
 
@@ -259,6 +261,8 @@ for those unaware of the power of decorators in python all you need to know for 
 
 we can also instruct `Flask` to generate templates that are stored in the `/template` folder of the main project.Flask has a built-in functions. all templates should be stored as `.html` files however they are written in the `jinja` templating style that lets you interject python into your HTML code. (we'll talk about that more later)
 
+#### Rendering
+
 We'll really quickly just update our `hello` function to render out `hello.html` instead of a string.
 
 ```python
@@ -272,6 +276,8 @@ def hello():
 ```
 
 so to reiterate `render_template("hello.html")` will reach into the `/template` folder and grab the contents stored in `hello.html` and generate them to serve at the `/hello`
+
+#### Templating
 
 We can start our `hello.html` to look like...
 
@@ -288,4 +294,60 @@ We can start our `hello.html` to look like...
 </html>
 ```
 
-this is written in html and now we can work forward and begin to implement some of the `jinja` template information. `jinja` allows you to put variables into the html to dynamic render new templates. yo
+this is written in html and now we can work forward and begin to implement some of the `jinja` template information. `jinja` allows you to put variables into the html to dynamic render new templates. So we'll imbed a visitor number in the site as the python will now look like the following
+
+```python
+# routes.py
+count = -1 # start at -1 so it becomes 0 indexed on first increase
+@app.route('/hello') # a decorator
+def hello():
+  global count # makes changes to count seen globally to the entire script
+  count += 1
+  return render_template("hello.html", number = count + 1) # attached the variable to render with a new name
+```
+
+now using `jinja` we can embed that count variable, by surrounding with double `{}` (`{{}}`). I would like to make a more general note that you can do similar things in a lot of other languages while just swapping out the special characters.
+
+```html
+<!--hello.html-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Visitor{{ number }}</title>
+    </head>
+    <body>
+        <h1>Hello Visitor #{{ number }}!</h1>
+    </body>
+</html>
+```
+now the first person who logs into the site will receive the following html when they access the page.
+
+```html
+<!--hello.html-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Visitor 1</title>
+    </head>
+    <body>
+        <h1>Hello Visitor #1!</h1>
+    </body>
+</html>
+```
+
+#### Advanced Routing
+
+for this example we will be working with the `routes.py`, `templates/hello.html`, and the new `templates/user_information.html`
+
+for starts we will make a new route in our `route.py` file
+
+```python
+#routes.py
+
+...
+
+@app.routes("/user_profile/id")
+def user_profile(id=''):
+  return render_template("user_information.html", user=db.get('user', id))
+
+```
