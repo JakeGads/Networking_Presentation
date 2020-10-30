@@ -255,4 +255,20 @@ def hello():
   return "<h1>Hello World!</h1>"
 ```
 
-for those unaware of the power of decorators in python all you need to know for these examples is that it links built in `Flask` dynamically generated function. In practice all you need to know is that the server will now direct generate anyone to that url to the `hello` function 
+for those unaware of the power of decorators in python all you need to know for these examples is that it links built in `Flask` dynamically generated function. In practice all you need to know is that the server will now direct generate anyone to that url to the `hello` function
+
+we can also instruct `Flask` to generate templates that are stored in the `/template` folder of the main project.Flask has a built-in functions. all templates should be stored as `.html` files however they are written in the `jinja` templating style that lets you interject python into your HTML code. (we'll talk about that more later)
+
+We'll really quickly just update our `hello` function to render out `hello.html` instead of a string.
+
+```python
+# routes.py
+from config import app
+from flask import render_template
+
+@app.route('/hello') # a decorator
+def hello():
+  return render_template("hello.html") 
+```
+
+so to reiterate `render_template("hello.html")` will reach into the `/template` folder and grab the contents stored in `hello.html` and generate them to serve at the `/hello`
