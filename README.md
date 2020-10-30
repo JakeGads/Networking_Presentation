@@ -346,8 +346,11 @@ for starts we will make a new route in our `route.py` file
 
 ...
 
-@app.routes("/user_profile/id")
+@app.route("/user_profile/<id>")
 def user_profile(id=''):
   return render_template("user_information.html", user=db.get('user', id))
-
 ```
+
+The app route ends with a variable wraped in `<>` this means that the path will be resolved as `/user_profile/123454` where id will be read in as some numbers, not it will always be registered as a `str`
+
+now we have to play pretend a little that `db.get('user', id)` is reaching into a data base and pulling out user information in a json like object (dict). which means we can unpack the information in the in the template.
