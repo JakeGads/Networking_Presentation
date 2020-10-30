@@ -287,3 +287,5 @@ We can start our `hello.html` to look like...
     </body>
 </html>
 ```
+
+this is written in html and now we can work forward and begin to implement some of the `jinja` template information. `jinja` allows you to put variables into the html to dynamic render new templates. yo
