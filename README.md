@@ -272,3 +272,18 @@ def hello():
 ```
 
 so to reiterate `render_template("hello.html")` will reach into the `/template` folder and grab the contents stored in `hello.html` and generate them to serve at the `/hello`
+
+We can start our `hello.html` to look like...
+
+```html
+<!--hello.html-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
+</html>
+```
